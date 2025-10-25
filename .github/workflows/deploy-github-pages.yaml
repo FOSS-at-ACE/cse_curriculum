@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'cse_curriculum/**'
+      - 'docs/**'
+      - 'mkdocs.yml'
   workflow_dispatch:
 
 permissions:
@@ -32,7 +33,7 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Build MkDocs site
-        run: mkdocs build --config-file cse_curriculum/mkdocs.yml --site-dir site
+        run: mkdocs build --site-dir site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
