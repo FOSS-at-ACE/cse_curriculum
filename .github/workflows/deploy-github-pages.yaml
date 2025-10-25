@@ -13,7 +13,7 @@ permissions:
  
 jobs:
   build_mkdocs:
-    runs-on: windows
+    runs-on: windows-latest
  
     steps:
       - name: Checkout code
@@ -32,7 +32,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: windows
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
